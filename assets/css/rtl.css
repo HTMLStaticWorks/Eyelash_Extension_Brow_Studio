@@ -1,0 +1,47 @@
+/* RTL Logical Properties Overrides */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .me-3 {
+    margin-right: 0 !important;
+    margin-left: 1rem !important;
+}
+
+[dir="rtl"] .ms-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+}
+
+[dir="rtl"] .pe-3 {
+    padding-right: 0 !important;
+    padding-left: 1rem !important;
+}
+
+[dir="rtl"] .ps-3 {
+    padding-left: 0 !important;
+    padding-right: 1rem !important;
+}
+
+[dir="rtl"] .float-end {
+    float: left !important;
+}
+
+[dir="rtl"] .float-start {
+    float: right !important;
+}
+
+/* Adjusting Bootstrap icons for RTL if needed */
+[dir="rtl"] .bi-arrow-right::before {
+    content: "\f12f"; /* bi-arrow-left */
+}
+
+[dir="rtl"] .bi-arrow-left::before {
+    content: "\f130"; /* bi-arrow-right */
+}
+
+/* Accordion RTL Icon Fix */
+.accordion-button::after {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}

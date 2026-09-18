@@ -1,0 +1,139 @@
+/* Dark Mode Theme overrides */
+:root[data-theme="dark"] {
+    --bg-body: var(--dark-espresso);
+    --text-body: var(--text-dark);
+    --bg-surface: var(--deep-brown);
+    --text-primary: var(--cream);
+    --text-muted: #C4B7B5;
+    --border-color: rgba(248, 242, 236, 0.10);
+}
+
+[data-theme="dark"] .navbar-custom.scrolled {
+    background: var(--dark-espresso);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+}
+
+[data-theme="dark"] .navbar-brand {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .navbar-nav .nav-link {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .btn-outline {
+    color: var(--text-dark);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    border-color: var(--text-dark);
+}
+
+[data-theme="dark"] .site-footer {
+    background-color: var(--deep-brown);
+    border-top-color: var(--border-color);
+}
+
+/* Ensure text-dark-espresso is visible in dark mode */
+html[data-theme="dark"] .text-dark-espresso {
+    color: var(--text-dark) !important;
+}
+html[data-theme="dark"] .bg-dark-espresso {
+    background-color: var(--deep-brown) !important;
+}
+html[data-theme="dark"] .accordion-button {
+    color: var(--text-dark) !important;
+}
+html[data-theme="dark"] .accordion-button:not(.collapsed) {
+    color: var(--primary) !important;
+}
+
+/* Global text overrides for dark mode to ensure everything is visible */
+html[data-theme="dark"] body,
+html[data-theme="dark"] p,
+html[data-theme="dark"] span,
+html[data-theme="dark"] li,
+html[data-theme="dark"] h1, 
+html[data-theme="dark"] h2, 
+html[data-theme="dark"] h3, 
+html[data-theme="dark"] h4, 
+html[data-theme="dark"] h5, 
+html[data-theme="dark"] h6 {
+    color: var(--text-dark) !important;
+}
+
+html[data-theme="dark"] .text-muted {
+    color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .text-dark,
+html[data-theme="dark"] .text-black,
+html[data-theme="dark"] .text-dark-espresso {
+    color: var(--text-dark) !important;
+}
+
+html[data-theme="dark"] .text-accent {
+    color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .bg-cream,
+html[data-theme="dark"] .bg-light,
+html[data-theme="dark"] .bg-white {
+    background-color: var(--deep-brown) !important;
+}
+
+/* Force all sections and cards to be dark */
+html[data-theme="dark"] .section:not(.bg-dark-espresso),
+html[data-theme="dark"] footer,
+html[data-theme="dark"] header {
+    background-color: var(--bg-body) !important;
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .bg-surface,
+html[data-theme="dark"] .bg-cream,
+html[data-theme="dark"] .bg-light,
+html[data-theme="dark"] .bg-white {
+    background-color: var(--deep-brown) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Ensure text in cards is visible */
+html[data-theme="dark"] .card-body * {
+    color: var(--text-dark) !important;
+}
+
+/* Fix hover states and active states in dark mode that were overridden */
+html[data-theme="dark"] .navbar-nav .nav-link:hover,
+html[data-theme="dark"] .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .social-icon-hover:hover {
+    color: var(--secondary) !important;
+}
+
+/* Ensure text-accent links in Explore Further (cards) keep their color instead of turning white */
+html[data-theme="dark"] .card-body .text-accent {
+    color: var(--primary) !important;
+}
+html[data-theme="dark"] .card-body .text-accent:hover {
+    color: var(--secondary) !important;
+}
+
+/* Ensure accordion icons (chevrons) are visible in dark mode */
+html[data-theme="dark"] .accordion-button::after {
+    filter: invert(1) brightness(100);
+}
+/* Ensure accordion button text is visible in dark mode */
+html[data-theme="dark"] .accordion-button {
+    color: var(--text-dark) !important;
+}
+
+/* Learn more and view style hover effect fix in dark mode */
+html[data-theme="dark"] .btn-outline:hover {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: #fff !important;
+}
