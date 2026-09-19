@@ -40,8 +40,34 @@
     content: "\f130"; /* bi-arrow-right */
 }
 
-/* Accordion RTL Icon Fix */
-.accordion-button::after {
+/* Accordion RTL Icon Fix - Keep Right Corner */
+[dir="rtl"] .accordion-button::after {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+[dir="rtl"] .text-lg-start,
+[dir="rtl"] .text-start {
+    text-align: right !important;
+}
+
+[dir="rtl"] .me-4 {
+    margin-right: 0 !important;
+    margin-left: 1.5rem !important;
+}
+
+[dir="rtl"] .ms-4 {
     margin-left: 0 !important;
-    margin-right: auto !important;
+    margin-right: 1.5rem !important;
+}
+
+[dir="rtl"] .hero-image {
+    right: auto !important;
+    left: 0 !important;
+}
+
+[dir="rtl"] .hero-gradient {
+    left: auto !important;
+    right: 0 !important;
+    background: linear-gradient(270deg, var(--bg-body) 0%, transparent 100%) !important;
 }

@@ -24,11 +24,10 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-xl navbar-custom">
-        <div class="container-fluid px-4 px-lg-5 d-flex align-items-center">
+        <div class="container-fluid px-4 px-lg-5">
 
             <!-- Left: Brand (width 33% on XL) -->
-            <div class="d-flex align-items-center">
-                <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+            <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👁️%3C/text%3E%3C/svg%3E"
                         alt="Logo" width="32" height="32">
                     <h2 class="footer-heading mb-0 ms-2">STUDIO</h2>
@@ -38,7 +37,6 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            </div>
 
             <!-- Center & Right: Collapse area -->
             <div class="collapse navbar-collapse justify-content-between" id="mainNav">
@@ -72,28 +70,31 @@
     <!-- Main Content -->
     <main>
         <!-- 1. Hero Section -->
-        <section class="section vh-100 d-flex align-items-center position-relative overflow-hidden"
+        <section class="section min-vh-100 d-flex align-items-center position-relative overflow-hidden py-5 py-lg-0 mt-5 mt-lg-0"
             style="background-color: var(--bg-body);">
-            <div class="container h-100 position-relative z-1">
-                <div class="row h-100 align-items-center">
-                    <div class="col-lg-6 col-md-8 position-relative z-2">
+            <div class="container position-relative z-1 pt-5 pt-lg-0">
+                <div class="row align-items-center flex-column-reverse flex-lg-row text-center text-lg-start">
+                    <div class="col-lg-6 col-md-8 position-relative z-2 mb-4 mb-lg-0 mx-auto mx-lg-0">
                         <span class="eyebrow text-accent mb-4 d-block reveal-on-scroll">LASHES • BROWS • BEAUTY</span>
                         <h1 class="display-2 font-heading mb-4 text-dark-espresso reveal-on-scroll">Your Eyes,
                             Beautifully Framed.</h1>
-                        <p class="lead text-muted mb-5 reveal-on-scroll" style="max-width: 480px;">
+                        <p class="lead text-muted mb-5 reveal-on-scroll mx-auto mx-lg-0" style="max-width: 480px;">
                             Precision lash and brow artistry designed to complement your features with effortless,
                             refined beauty.
                         </p>
-                        <div class="d-flex flex-column flex-sm-row gap-3 reveal-on-scroll">
+                        <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 reveal-on-scroll">
                             <a href="services.html" class="btn-outline text-center">Explore Our Services</a>
                         </div>
+                    </div>
+                    <div class="col-lg-6 d-block d-lg-none mt-4">
+                        <img src="assets/images/home1-hero.jpg" alt="Hero" class="img-fluid rounded shadow-sm w-100">
                     </div>
                 </div>
             </div>
             <!-- Portrait -->
-            <div class="position-absolute top-0 end-0 h-100 w-50 d-none d-lg-block z-0"
+            <div class="hero-image position-absolute top-0 end-0 h-100 w-50 d-none d-lg-block z-0"
                 style="background: url('assets/images/home1-hero.jpg') no-repeat center center/cover;">
-                <div class="position-absolute top-0 start-0 w-100 h-100"
+                <div class="hero-gradient position-absolute top-0 start-0 w-100 h-100"
                     style="background: linear-gradient(90deg, var(--bg-body) 0%, transparent 100%);"></div>
             </div>
         </section>
@@ -120,7 +121,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mt-lg-5 reveal-on-scroll">
+                    <div class="col-md-4 reveal-on-scroll">
                         <div class="card border-0 bg-transparent">
                             <img src="assets/images/hybrid.jpg" class="card-img-top rounded-0 w-100 object-fit-cover"
                                 alt="Hybrid Lashes" style="aspect-ratio: 4/5;">
@@ -164,7 +165,7 @@
                     <div class="col-md-6 reveal-on-scroll">
                         <div class="p-5 border border-light h-100 transition-base hover-shadow"
                             style="background: url('https://images.unsplash.com/photo-1522337360788-8b13fee7a3af?auto=format&fit=crop&q=80') no-repeat center center/cover; position: relative;">
-                            <div class="position-absolute top-0 start-0 w-100 h-100"
+                            <div class="hero-gradient position-absolute top-0 start-0 w-100 h-100"
                                 style="background-color: rgba(33,25,26,0.6);"></div>
                             <div class="position-relative z-1 text-white">
                                 <h3 class="h3 font-heading text-white">Lash Extensions</h3>

@@ -10,7 +10,7 @@
 
 [data-theme="dark"] .navbar-custom.scrolled {
     background: var(--dark-espresso);
-    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="dark"] .navbar-brand {
@@ -39,12 +39,15 @@
 html[data-theme="dark"] .text-dark-espresso {
     color: var(--text-dark) !important;
 }
+
 html[data-theme="dark"] .bg-dark-espresso {
     background-color: var(--deep-brown) !important;
 }
+
 html[data-theme="dark"] .accordion-button {
     color: var(--text-dark) !important;
 }
+
 html[data-theme="dark"] .accordion-button:not(.collapsed) {
     color: var(--primary) !important;
 }
@@ -54,11 +57,11 @@ html[data-theme="dark"] body,
 html[data-theme="dark"] p,
 html[data-theme="dark"] span,
 html[data-theme="dark"] li,
-html[data-theme="dark"] h1, 
-html[data-theme="dark"] h2, 
-html[data-theme="dark"] h3, 
-html[data-theme="dark"] h4, 
-html[data-theme="dark"] h5, 
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
 html[data-theme="dark"] h6 {
     color: var(--text-dark) !important;
 }
@@ -99,6 +102,14 @@ html[data-theme="dark"] .bg-white {
     border-color: var(--border-color) !important;
 }
 
+html[data-theme="dark"] ::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+html[data-theme="dark"] select.form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
 /* Ensure text in cards is visible */
 html[data-theme="dark"] .card-body * {
     color: var(--text-dark) !important;
@@ -118,6 +129,7 @@ html[data-theme="dark"] .social-icon-hover:hover {
 html[data-theme="dark"] .card-body .text-accent {
     color: var(--primary) !important;
 }
+
 html[data-theme="dark"] .card-body .text-accent:hover {
     color: var(--secondary) !important;
 }
@@ -126,6 +138,7 @@ html[data-theme="dark"] .card-body .text-accent:hover {
 html[data-theme="dark"] .accordion-button::after {
     filter: invert(1) brightness(100);
 }
+
 /* Ensure accordion button text is visible in dark mode */
 html[data-theme="dark"] .accordion-button {
     color: var(--text-dark) !important;

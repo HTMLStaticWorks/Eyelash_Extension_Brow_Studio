@@ -43,13 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. RTL Toggle (Demo purpose)
     const rtlBtn = document.getElementById('rtl-toggle');
+    const currentDir = localStorage.getItem('dir') || 'ltr';
+    if (currentDir === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+    }
+    
     if (rtlBtn) {
         rtlBtn.addEventListener('click', () => {
             const dir = document.documentElement.getAttribute('dir');
             if (dir === 'rtl') {
                 document.documentElement.setAttribute('dir', 'ltr');
+                localStorage.setItem('dir', 'ltr');
             } else {
                 document.documentElement.setAttribute('dir', 'rtl');
+                localStorage.setItem('dir', 'rtl');
             }
         });
     }
