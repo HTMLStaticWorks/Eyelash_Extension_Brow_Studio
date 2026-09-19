@@ -40,15 +40,20 @@
     content: "\f130"; /* bi-arrow-right */
 }
 
-/* Accordion RTL Icon Fix - Keep Right Corner */
+/* Accordion RTL Icon Fix - Keep Left Corner */
 [dir="rtl"] .accordion-button::after {
-    margin-right: 0 !important;
-    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
 }
 
-[dir="rtl"] .text-lg-start,
 [dir="rtl"] .text-start {
     text-align: right !important;
+}
+
+@media (min-width: 992px) {
+    [dir="rtl"] .text-lg-start {
+        text-align: right !important;
+    }
 }
 
 [dir="rtl"] .me-4 {
@@ -61,13 +66,33 @@
     margin-right: 1.5rem !important;
 }
 
+[dir="rtl"] .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+[dir="rtl"] .me-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
 [dir="rtl"] .hero-image {
     right: auto !important;
     left: 0 !important;
 }
 
-[dir="rtl"] .hero-gradient {
+[dir="rtl"] .hero-image .hero-gradient {
     left: auto !important;
     right: 0 !important;
     background: linear-gradient(270deg, var(--bg-body) 0%, transparent 100%) !important;
+}
+
+[dir="rtl"] .signature-card .card-body {
+    padding-right: 1.5rem !important;
+}
+
+[dir="rtl"] .form-select {
+    background-position: left 0.75rem center !important;
+    padding-right: 0.75rem !important;
+    padding-left: 2.25rem !important;
 }
