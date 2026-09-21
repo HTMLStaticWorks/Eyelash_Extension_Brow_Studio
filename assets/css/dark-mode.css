@@ -150,3 +150,5 @@ html[data-theme="dark"] .btn-outline:hover {
     border-color: var(--secondary) !important;
     color: #fff !important;
 }
+
+[data-theme="dark"] .navbar-toggler-icon, html[data-theme="dark"] .navbar-toggler-icon { filter: invert(1); }
