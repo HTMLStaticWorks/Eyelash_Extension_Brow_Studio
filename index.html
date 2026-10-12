@@ -28,8 +28,8 @@
 
             <!-- Left: Brand (width 33% on XL) -->
             <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👁️%3C/text%3E%3C/svg%3E"
-                    alt="Logo" width="32" height="32">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M8 50 Q50 8 92 50 Q50 92 8 50Z' fill='none' stroke='%23a87958' stroke-width='7'/%3E%3Ccircle cx='50' cy='50' r='16' fill='%23a87958'/%3E%3Ccircle cx='55' cy='45' r='5' fill='%23fff'/%3E%3C/svg%3E"
+                    alt="Studio eye mark" width="36" height="36">
                 <h2 class="footer-heading mb-0 ms-2">STUDIO</h2>
             </a>
             <button class="navbar-toggler border-0 shadow-none ms-auto d-xl-none" type="button"
@@ -86,6 +86,7 @@
                         <div
                             class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 reveal-on-scroll">
                             <a href="services.html" class="btn-outline text-center">Explore Our Services</a>
+                            <a href="appointment.html" class="btn-primary text-center">Book an Appointment</a>
                         </div>
                     </div>
                     <div class="col-lg-6 d-block d-lg-none mt-4">
@@ -271,25 +272,25 @@
                         <!-- Simplified representation of a slider for demo purposes -->
                         <div class="position-relative overflow-hidden rounded-1 border"
                             style="height: 400px; background: #eee;">
-                            <div class="position-absolute top-0 start-0 w-50 h-100"
-                                style="background: url('assets/images/before.jpg') center/cover;">
+                            <div id="transformationBefore" class="position-absolute top-0 start-0 h-100"
+                                style="width:50%; background: url('assets/images/before.jpg') center/cover;">
                                 <div
                                     class="position-absolute bottom-0 start-0 m-3 px-3 py-1 bg-white text-dark small font-heading">
                                     Before</div>
                             </div>
-                            <div class="position-absolute top-0 end-0 w-50 h-100"
+                            <div id="transformationAfter" class="position-absolute top-0 end-0 w-100 h-100"
                                 style="background: url('assets/images/after.jpg') center/cover;">
                                 <div
                                     class="position-absolute bottom-0 end-0 m-3 px-3 py-1 bg-white text-dark small font-heading">
                                     After</div>
                             </div>
-                            <div class="position-absolute top-0 start-50 h-100"
-                                style="width: 2px; background: var(--accent); transform: translateX(-50%);">
-                                <div class="position-absolute top-50 start-50 translate-middle rounded-circle bg-accent text-white d-flex align-items-center justify-content-center"
-                                    style="width: 40px; height: 40px; background-color: var(--accent); cursor: pointer;">
-                                    ↔
-                                </div>
+                            <div id="transformationDivider" class="transformation-divider position-absolute top-0 h-100"
+                                style="left:50%; width:2px; background:var(--accent);">
+                                <div class="transformation-handle position-absolute top-50 start-50 translate-middle rounded-circle text-white d-flex align-items-center justify-content-center"
+                                    aria-hidden="true">↔</div>
                             </div>
+                            <label class="visually-hidden" for="transformationRange">Compare before and after results</label>
+                            <input id="transformationRange" class="transformation-range" type="range" min="10" max="90" value="50" aria-label="Compare before and after results">
                         </div>
                         <p class="text-muted small mt-4">Images are illustrative examples. Results vary by individual.
                         </p>
@@ -299,7 +300,8 @@
         </section>
 
         <!-- 6. Appointment CTA -->
-        <section class="section bg-cream text-center reveal-on-scroll">
+        <section class="studio-proof-section section py-5"><div class="container"><div class="row g-4 align-items-stretch"><div class="col-lg-5"><span class="eyebrow text-accent">THE STUDIO STANDARD</span><h2 class="display-5 font-heading mt-3">Thoughtful artistry, from consultation to aftercare.</h2><p class="text-muted">Your look should feel like you. We tailor every lash map and brow shape to your features, comfort, and everyday routine.</p><a class="btn-primary d-inline-block mt-2" href="about.html">Meet the Studio</a></div><div class="col-lg-7"><div class="row g-3 h-100"><div class="col-sm-4"><article class="studio-value-card h-100"><span>01</span><h3>Personalized design</h3><p>Styles selected around eye shape, natural lash health, and the finish you love.</p></article></div><div class="col-sm-4"><article class="studio-value-card h-100"><span>02</span><h3>Care-first service</h3><p>Clean tools, considered application, and clear aftercare guidance at every visit.</p></article></div><div class="col-sm-4"><article class="studio-value-card h-100"><span>03</span><h3>Lasting confidence</h3><p>Practical maintenance advice helps you protect your results between appointments.</p></article></div></div></div></div></div></section>
+<section class="section bg-cream text-center reveal-on-scroll">
             <div class="container py-5">
                 <h2 class="display-3 font-heading text-dark-espresso mb-4">Ready To Frame Your Look?</h2>
                 <p class="lead text-muted mb-5 mx-auto" style="max-width: 600px;">
@@ -315,14 +317,17 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    
+
+
+<footer class="site-footer">
         <div class="container">
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-4 pe-lg-5">
                     <a href="index.html"
                         class="text-decoration-none text-dark-espresso d-inline-flex align-items-center gap-2 mb-4">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👁️%3C/text%3E%3C/svg%3E"
-                            alt="Logo" width="32" height="32">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M8 50 Q50 8 92 50 Q50 92 8 50Z' fill='none' stroke='%23a87958' stroke-width='7'/%3E%3Ccircle cx='50' cy='50' r='16' fill='%23a87958'/%3E%3Ccircle cx='55' cy='45' r='5' fill='%23fff'/%3E%3C/svg%3E"
+                            alt="Studio eye mark" width="36" height="36">
                         <h2 class="footer-heading mb-0">STUDIO</h2>
                     </a>
                     <p class="text-muted small mb-4">The art of the perfect frame. Precision lash and brow artistry
