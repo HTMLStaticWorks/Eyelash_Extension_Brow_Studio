@@ -126,3 +126,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+/* 7. Responsive before/after transformation comparison */
+document.addEventListener('DOMContentLoaded', () => {
+    const range = document.getElementById('transformationRange');
+    const before = document.getElementById('transformationBefore');
+    const after = document.getElementById('transformationAfter');
+    const divider = document.getElementById('transformationDivider');
+    if (range && before && divider) {
+        const updateComparison = () => {
+            const value = `${range.value}%`;
+            before.style.width = value;
+            if (after) after.style.clipPath = `inset(0 0 0 ${value})`;
+            divider.style.left = value;
+        };
+        range.addEventListener('input', updateComparison);
+        updateComparison();
+    }
+});
